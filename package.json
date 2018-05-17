@@ -1,0 +1,31 @@
+{
+  "name": "drawit",
+  "version": "1.0.0",
+  "description": "This is a user friendly js library that can be used to genarate configuration file for your favourite grahp libraries like c3, chart.js, poty.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf lib/*",
+    "build": "node_modules/.bin/babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codezilla2018/DrawIt.git"
+  },
+  "keywords": [
+    "c3",
+    "js",
+    "javascript",
+    "grahp"
+  ],
+  "author": "Chamath Sandaru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codezilla2018/DrawIt/issues"
+  },
+  "homepage": "https://github.com/codezilla2018/DrawIt#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
