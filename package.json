@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf lib/*",
-    "build": "node_modules/.bin/babel src -d lib"
+    "clean": "rm -rf dist/*",
+    "build": "node_modules/.bin/babel src -d lib",
+    "watch": "webpack --watch",
+    "webpack": "node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,12 @@
   "homepage": "https://github.com/codezilla2018/DrawIt#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  },
+  "dependencies": {
+    "d3-fetch": "^1.1.0"
   }
 }
