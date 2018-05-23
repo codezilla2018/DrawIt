@@ -12,11 +12,17 @@ export function getDataFromFile(filename){
     let resp  = new Object();
     switch (ext){
         case "csv": {
-            resp  = csv(filename);
+            resp  = csv(filename, (data)=>{
+                data["count"] = +data["count"];
+                return data;
+            });
             break;
         }
         case "tsv": {
-            resp = tsv(filename);
+            resp = tsv(filename, (data)=>{
+                data["count"] = +data["count"];
+                return data;
+            });
             break;
         }
         case "json": {

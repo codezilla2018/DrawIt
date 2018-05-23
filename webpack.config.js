@@ -2,7 +2,9 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        filename: 'drawit.js'
+        filename: 'drawit.js',
+        libraryTarget: 'var',
+        library: 'DI'
       },
     module: {
       rules: [
@@ -12,7 +14,7 @@ module.exports = {
           use: {
             loader: "babel-loader",
             options: {
-              presets: ["babel-preset-env"]
+              presets: ["env"]
             }
           }
         }
