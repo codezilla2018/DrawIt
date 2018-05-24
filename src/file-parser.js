@@ -19,10 +19,7 @@ export function getDataFromFile(filename){
             break;
         }
         case "tsv": {
-            resp = tsv(filename, (data)=>{
-                data["count"] = +data["count"];
-                return data;
-            });
+            resp = tsv(filename);
             break;
         }
         case "json": {

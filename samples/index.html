@@ -7,19 +7,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.1/c3.min.css" rel="stylesheet"></link>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.1/c3.min.js"></script>
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
   <script src="../dist/drawit.js"></script>
 </head>
 <body>
+<h1>c3 line chart example</h1>
+<div id="chrt_line"></div>
 
-<input type="text" id="url" value="/samples/test1.csv"></input>
-<button type="button" id="cli" onclick="drawSVG()" >Click me</button>
-<div id="ch"></div>
+<h1>c3 bar chart example</h1>
+<div id="chrt_bar"></div>
+
+<h1>c3 spline chart example</h1>
+<div id="chrt_spline"></div>
+
+<h1>c3 area chart example</h1>
+<div id="chrt_area"></div>
+
 <script>
- 
-function drawSVG(){
-  DI.generate(document.getElementById("url").value,'ch', c3.generate, {x:'fruit', y:'count'} );
-}
+
+  DI.generate("/samples/data_files/test1.csv", 'chrt_line', c3.generate, 'line', {x:'fruit', y:'count'});
+
+  DI.generate("/samples/data_files/test1.csv", 'chrt_bar', c3.generate, 'bar', {x:'fruit', y:'count'});
+
+  DI.generate("/samples/data_files/test1.csv", 'chrt_spline', c3.generate, 'spline', {x:'fruit', y:'count'});
+
+  DI.generate("/samples/data_files/test1.csv", 'chrt_area', c3.generate, 'area', {x:'fruit', y:'count'});
+
 </script>
 </body>
 </html>

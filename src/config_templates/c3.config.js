@@ -1,8 +1,9 @@
   export const conf  = {
     bindto : "",
     data: {
-      x : 'fruit',
+      x : "",
       json: [],
+      type: "",
       keys: {
         value: []
       },
